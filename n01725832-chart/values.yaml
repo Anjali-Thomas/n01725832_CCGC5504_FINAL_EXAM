@@ -1,0 +1,8 @@
+replicaCount: 2
+image:
+  repository: anjali9292/n01725832-nginx
+  pullPolicy: Always
+  tag: "latest"
+service:
+  type: LoadBalancer
+  port: 80
