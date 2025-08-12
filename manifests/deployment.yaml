@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: n01725832-nginx
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: n01725832-nginx
+  template:
+    metadata:
+      labels:
+        app: n01725832-nginx
+    spec:
+      containers:
+      - name: nginx
+        image: anjali9292/n01725832-nginx:latest
+        ports:
+        - containerPort: 80
